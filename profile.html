@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<!--cssの読み込み
+----------------------------------------------->
+<link rel="stylesheet" href="css/style.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.css">
+<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+
+<!--googlefontの読み込み
+----------------------------------------------->
+<link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+
+<!--javascriptの読み込み
+---------------------------------------------->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inview/1.0.0/jquery.inview.min.js"></script>
+<script src="js/skill.bars.jquery.js"></script>
+<script src="js/javascript.js"></script>
+
+<!----------------------------------------------->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
+<!--------------------------------------------->
+
+<title>afiafiblog-profile</title>
+</head>
+<body>
+  <!--ヘッダーの作成
+  ---------------------------------------------->
+  <header class="page-header">
+  <!--メインナビの作成
+  ---------------------------------------------->
+    <nav class="navbar navbar-expand-md  navbar-light bg-color">
+      <a class="navbar-brand" href="top.html"><img src="img/afiafilogo.png" alt="ロゴ" class="logo"></a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#bs-navi" aria-controls="bs-navi" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="bs-navi">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">ホーム</a></li>
+          <li class="nav-item"><a class="nav-link" href="profile.html">プロフィール</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">ブログ</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </div>
+    </nav>
+  <!--------------------------------------------->
+  </header>
+  <!--------------------------------------------->
+
+  <!--SNSボタン
+  ----------------------------------------------->
+  <div id="snsbottom">
+    <nav class="social">
+      <ul>
+      <li><a href="https://twitter.com/gian_michelle">Twitter <i class="fab fa-twitter"></i></a></li>
+      <li><a href="https://facebook.com/">Facebook <i class="fab fa-facebook"></i></a></li>
+      <li><a href="http://dribbble.com/gian_michelle">Dribbble <i class="fab fa-dribbble"></i></a></li>
+      <li><a href="http://behance.net/gianm">Behance <i class="fab fa-behance"></i></a></li>
+      </ul>
+    </nav>
+  </div>
+  <!--------------------------------------------->
+
+  <div class="toppage">
+    <h1 class="toppage-title">afiafiブログ</h1>
+    <div class="profile-page">
+      <h1 class="profile-title">プロフィール</h1>
+      <h2 class="blog-write">このブログを書いている人</h2>
+      <img src="img/masaki.png" alt="マサキの自画像" class="masaki-img"/>
+      <div class="profile-sentense">
+        <p>フリーランスエンジニアのマサキです！</p>
+        <p>18歳でエンジニアになり、自由な働き方を求めて22歳で独立。</p>
+        <p>独立後は物流システムの構築に携わり、現在はデザインの道を目指して日々過ごしています！</p>
+      </div>
+
+      <h1 class="headline">スキル紹介</h1>
+      <div class="skillbar skillbar-html" data-percent="80">
+        <div class="skillbar-title">HTML5</div>
+        <div class="skillbar-bar"></div>
+        <div class="skill-bar-percent"></div>
+      </div>
+      <div class="skillbar skillbar-css" data-percent="80">
+        <div class="skillbar-title">CSS</div>
+        <div class="skillbar-bar"></div>
+        <div class="skill-bar-percent"></div>
+      </div>
+      <div class="skillbar skillbar-js" data-percent="80">
+        <div class="skillbar-title">JavaScript</div>
+        <div class="skillbar-bar"></div>
+        <div class="skill-bar-percent"></div>
+      </div>
+      <div class="skillbar skillbar-wp" data-percent="80">
+        <div class="skillbar-title">WordPress</div>
+        <div class="skillbar-bar"></div>
+        <div class="skill-bar-percent"></div>
+      </div>
+      <div class="skillbar skillbar-java" data-percent="80">
+        <div class="skillbar-title">Java</div>
+        <div class="skillbar-bar"></div>
+        <div class="skill-bar-percent"></div>
+      </div>
+
+      <div class="section">
+        <div class="oneArea">
+          <div class="onebox inview_re LeftToRight">
+            <div class="imgArea"><img src="img/masaki.png" alt="マサキくん"></div>
+            <div class="fukiArea"><div class="fukidasi">javaの開発経験が一番長いので、javaが一番得意です！</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="performance-introduction">
+        <h1 class="headline">実績紹介</h1>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="card">
+                <img class="card-img-top" src="img/masakigblog.png" alt="ライトコースのイメージ画像">
+                <div class="card-body">
+                  <h4 class="card-title">まさきんぐブログ</h4>
+                  <p class="card-text">テキストの例です</p>
+                  <a href="#" class="btn btn-primary">詳細を見る</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <img class="card-img-top" src="img/afiafiblog.png" alt="スタンダードコースのイメージ画像">
+                <div class="card-body">
+                  <h4 class="card-title">マサキんぐブログ</h4>
+                  <p class="card-text">テキストの例です。</p>
+                  <a href="#" class="btn btn-primary">詳細を見る</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <img class="card-img-top" src="img/masakigblog.png" alt="プロフェッショナルコースのイメージ画像">
+                <div class="card-body">
+                  <h4 class="card-title">masakingblog</h4>
+                  <p class="card-text">テキストの例です。</p>
+                  <a href="#" class="btn btn-primary">詳細を見る</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+  </div>
+
+  <!-- footer部分
+  ----------------------------------------------->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <span class="footer-name">afiafiblog</span>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="menu">
+            <span>Menu</span>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="profile.html">Profile</a>
+            </li>
+            <li>
+              <a href="blog.html">Blog</a>
+            </li>
+            <li>
+              <a href="">Gallery</a>
+            </li>
+            </ul>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="address">
+              <span>Other</span>
+              <li>
+                <i class="fab fa-twitter" aria-hidden="true"></i> <a href="https://twitter.com/afiafiking"> Twitter</a>
+              </li>
+              <li>
+                <i class="fab fa-line" aria-hidden="true"></i> <a href="https://lin.ee/B6V9Kpw"> Line@</a>
+              </li>
+              <li>
+                <i class="far fa-envelope" aria-hidden="true"></i> <a href="contact.html"> Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  </footer>
+  <!----------------------------------------------->
+
+</body>
+</html>
