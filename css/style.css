@@ -1,0 +1,1032 @@
+/*共通設定
+-------------------------------------------*/
+html{
+  font-size: 100%;
+}
+
+body{
+  line-height: 1.7;
+  font-family: "Nico Moji";
+}
+a{
+  text-decoration: none;
+}
+@media (max-width: 715px) {
+  .logo{
+    width: 100px;
+  }
+
+}
+
+/*会話風吹き出し作成用
+-------------------------------------------*/
+.oneArea {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  max-width: 1024px;
+  margin: 50px auto;
+  padding: 0 10px;
+}
+.oneArea .onebox {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.oneArea .onebox:nth-child(even) {
+  flex-direction: row-reverse;
+  margin-top: 20px;
+}
+.oneArea .onebox .imgArea {
+  width: 16%;
+  position: relative;
+}
+.oneArea .onebox:nth-child(odd) .imgArea img {
+  width: 100%;
+  max-width: 130px;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  padding-right: 30px;
+}
+.oneArea .onebox:nth-child(even) .imgArea img {
+  width: 100%;
+  max-width: 130px;
+  position: absolute;
+  top: -20px;
+  left: auto;
+  right: 0;
+  padding-left: 30px;
+}
+.oneArea .onebox .fukiArea {
+  width: 63%;
+}
+.oneArea .onebox .fukidasi {
+  width: 100%;
+  position: relative;
+  padding: 25px;
+  background-color: #f2f3f7;
+  font-size: 18px;
+  color: #231815;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+.oneArea .onebox .fukidasi::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  transform: rotate(45deg);
+  top: 22px;
+  border-right: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+}
+.oneArea .onebox .fukidasi::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  transform: rotate(45deg);
+  top: 40px;
+  border-right: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+}
+.oneArea .onebox:nth-child(odd) .fukidasi::before {
+  left: -15px;
+  border-left: 25px solid #f2f3f7;
+  border-top: 25px solid transparent;
+}
+.oneArea .onebox:nth-child(odd) .fukidasi::after {
+  left: -25px;
+  border-left: 25px solid #ffffff;
+  border-top: 25px solid transparent;
+}
+.oneArea .onebox:nth-child(even) .fukidasi {
+  background-color: #fde5e5;
+}
+.oneArea .onebox:nth-child(even) .fukidasi::before {
+  left: auto;
+  right: -15px;
+  border-left: 25px solid transparent;
+  border-top: 25px solid #fde5e5;
+}
+.oneArea .onebox:nth-child(even) .fukidasi::after {
+  left: auto;
+  right: -25px;
+  border-left: 25px solid transparent;
+  border-top: 25px solid #ffffff;
+}
+@media screen and (max-width: 1024px) {
+  .oneArea .onebox:nth-child(odd) .imgArea img {
+    max-width: 70%;
+    top: 0;
+  }
+  .oneArea .onebox:nth-child(even) .imgArea img {
+    max-width: 70%;
+    top: 0;
+  }
+  .oneArea .onebox .fukidasi {
+    padding: 15px;
+    font-size: 14px;
+  }
+  .oneArea .onebox .fukidasi::before {
+    top: 8px;
+  }
+  .oneArea .onebox .fukidasi::after {
+    top: 20px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .oneArea {
+    margin: 30px auto;
+  }
+  .oneArea .onebox:nth-child(even) {
+    margin-top: 15px;
+  }
+  .oneArea .onebox .imgArea {
+    width: 20%;
+  }
+  .oneArea .onebox .fukidasi {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+}
+
+/*------------------------------------------------------------
+fadein
+------------------------------------------------------------*/
+
+.RightToLeft {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: .6s;
+}
+.RightToLeft.is-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.LeftToRight {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: .6s;
+}
+.LeftToRight.is-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fadein {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: .6s;
+}
+.fadein.is-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.delay_a {
+  transition-delay: .2s;
+}
+.delay_b {
+  transition-delay: .4s;
+}
+.delay_c {
+  transition-delay: .6s;
+}
+.delay_d {
+  transition-delay: .8s;
+}
+.delay_e {
+  transition-delay: 1.0s;
+}
+
+
+/*header部分
+-------------------------------------------*/
+
+.bg-color{
+  background-color: #ffeaea;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo{
+  width: 400px;
+}
+
+.search-text{
+	margin-top:50px;
+	background-color: #272d33;
+	padding-top:60px;
+	padding-bottom:60px;
+}
+
+.search-text .input-search{
+	height:45px;
+	width:40%;
+	padding-left:20px;
+    color:#333;
+}
+
+.search-text .btn-search{
+    background: #da3e44;
+    font-family:Roboto;
+    border:none;
+	color:#FFF;
+	height: 45px;
+    width: 80px;
+}
+
+.search-text h4{
+    color: #FFF;
+    font-weight: 700;
+}
+
+@media (max-width: 715px) {
+  .logo{
+    width: 100px;
+  }
+
+}
+
+/*footer部分
+-------------------------------------------------------------*/
+footer{
+     background-color: #ffeaea;
+     padding:30px 0px;
+     margin-top: 30px;
+}
+
+.footer-name{
+    color:#000000;
+    font-weight:700;
+    font-size:30px;
+}
+
+.address span , .menu span{
+   color: #000000;
+   font-weight: bold;
+   border-bottom: 1px solid #c7c7c7;
+   padding:10px 0px;
+   display: block;
+   text-transform: uppercase;
+   font-size: 16px;
+   letter-spacing: 3px;
+}
+
+.address li a , .menu li a{
+    color:#000000;
+    letter-spacing: 3px;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.address li, .menu li{
+    margin:20px 0px;
+    list-style: none;
+}
+
+.address li a:hover , .menu li a:hover{
+    color: #da3e44;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+.address .fa{
+    color: #da3e44;
+    margin-right: 10px;
+    font-size:18px;
+}
+
+/*toppage.html
+------------------------------------------*/
+.top{
+  text-align: center;
+  font-family: "Nico Moji";
+  margin: 30px;
+}
+.top-title{
+  font-size: 5rem;
+  transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -webkit-transform: rotate(-10deg);
+}
+.top-sentense{
+  margin: 60px;
+  font-size: 1.5rem;
+
+}
+/*ボタンの作成
+-----------------------------------------*/
+@import "https://use.fontawesome.com/releases/v5.13.0/css/all.css";
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+.next-bottom {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #F7D76B;
+  border-radius: 0.5rem;
+}
+
+a.btn-3d-flip {
+  display: block;
+  width: 300px;
+  margin: 0 auto;
+  padding: 0;
+  -webkit-perspective: 600px;
+  perspective: 600px;
+  font-size: 180%;
+}
+
+a.btn-3d-flip:hover .btn-3d-flip-box {
+  -webkit-transform: translateY(-50%) rotateX(90deg);
+  transform: translateY(-50%) rotateX(90deg);
+}
+
+a.btn-3d-flip.btn-3d-flip2:hover .btn-3d-flip-box2 {
+  -webkit-transform: translateX(-50%) rotateY(-90deg);
+  transform: translateX(-50%) rotateY(-90deg);
+}
+
+.btn-3d-flip-box {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transform: rotateX(0);
+  transform: rotateX(0);
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.btn-3d-flip-box2 {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0);
+  text-decoration: none;
+  color: #fff;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.btn-3d-flip-box-face {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 1.5rem 0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  color: #fff;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.btn-3d-flip-box-face--front {
+  background: #F7D76B;
+}
+
+.btn-3d-flip-box-face--back {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  -webkit-transform: translateY(-1px) rotateX(-90deg);
+  transform: translateY(-1px) rotateX(-90deg);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  background: #dc5b00;
+}
+
+.btn-3d-flip-box-face--front2 {
+  color: #000;
+  border: 2px solid #000;
+  background: #fff;
+}
+
+.btn-3d-flip-box-face--back2 {
+  position: absolute;
+  top: 0;
+  left: 100%;
+
+  -webkit-transform: translateX(-1px) rotateY(90deg);
+
+  transform: translateX(-1px) rotateY(90deg);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+
+  color: #fff;
+  border: 2px solid #000;
+  background: #000;
+}
+
+.fa-position-right {
+  position: absolute;
+  top: calc(50% - 0.5em);
+  right: 1rem;
+}
+.introduction-img{
+  width: 600px;
+  height: 400px;
+}
+/*snsボタン
+----------------------------------------*/
+/* ボタン全体 */
+.flowbtn12{
+font-family:'Verdana',sans-serif;
+border-radius:20px;
+display:inline-block;
+width:100%;
+font-size:20px;
+transition:.4s;
+text-decoration:none;
+margin: 40px;
+
+
+}
+/* ボタン内テキストマウスホバー時 */
+.flowbtn12:hover{
+color:#fff!important;
+text-decoration:none;
+}
+/* Twitter */
+.flowbtn12.fl_tw2{
+border:solid 1px #55acee;
+color:#55acee;
+}
+/* Twitterマウスホバー時 */
+.flowbtn12.fl_tw2:hover{
+border:solid 1px #55acee;
+background:#55acee;
+}
+/* Instagram */
+.flowbtn12.insta_btn2{
+border:solid 1px #c6529a;
+color:#c6529a;
+}
+/* Instagramマウスホバー時 */
+.flowbtn12.insta_btn2:hover{
+border:solid 1px #c6529a;
+background:#c6529a;
+}
+/* Facebook */
+.flowbtn12.fl_fb2{
+border:solid 1px #3b5998;
+color:#3b5998;
+}
+/* Facebookマウスホバー時 */
+.flowbtn12.fl_fb2:hover{
+border:solid 1px #3b5998;
+background:#3b5998;
+}
+/* YouTube */
+.flowbtn12.fl_yu2{
+border:solid 1px #fc0d1c;
+color:#fc0d1c;
+}
+/* YouTubeマウスホバー時 */
+.flowbtn12.fl_yu2:hover{
+border:solid 1px #fc0d1c;
+background:#fc0d1c;
+}
+/* LINE */
+.flowbtn12.fl_li2{
+border:solid 1px #00c300;
+color:#00c300;
+}
+/* LINEマウスホバー時 */
+.flowbtn12.fl_li2:hover{
+border:solid 1px #00c300;
+background:#00c300;
+}
+/* プロフィールアイコン */
+.flowbtn12.fl_pf12{
+border:solid 1px #555;
+color:#555;
+}
+/* プロフィールアイコンマウスホバー時 */
+.flowbtn12.fl_pf12:hover{
+border:solid 1px #555;
+background:#555;
+}
+/* ボタン内テキスト調整 */
+.flowbtn12 span{
+font-size:14px;
+position:relative;
+left:8px;
+bottom:2px;
+}
+/* ulタグの内側余白を０にする */
+ul.snsbtniti2{
+padding:0!important;
+list-style-type:none!important;
+
+}
+/* ボタン全体の位置 */
+.snsbtniti2{
+display:flex;
+flex-flow:row wrap;
+text-align: center;
+}
+/* ボタン同士の余白 */
+.snsbtniti2 li{
+flex:0 0 10%;
+text-align:center !important;
+margin-left: 80px;
+}
+@media (max-width:1260px) {
+  .snsbtniti2 li{
+  flex:0 0 44%;
+  margin-left: 20px
+  }
+}
+/*index.htmlの装飾
+------------------------------------------*/
+.toppage{
+  text-align: center;
+}
+
+.toppage-title{
+  font-size: 10rem;
+  font-family: "Nico Moji";
+
+}
+
+.toppage-sentense{
+  font-family: "Nico Moji";
+  font-size: 3rem;
+}
+
+.blog-explanation{
+  font-family: "Nico Moji";
+  font-size: 1.5rem;
+
+}
+.site-construction{
+  font-family: "Nico Moji";
+  font-size: 1.5rem;
+
+}
+@media (max-width:715px) {
+  .toppage-title{
+    font-size: 5rem;
+  }
+  .toppage-sentense{
+    font-size: 1.5rem
+  }
+}
+
+
+/*見出しの装飾
+-------------------------------------------*/
+.headline {
+	position: relative;
+	display: inline-block;
+	width: 50%;
+	padding: 0 10%;
+	text-align: center;
+	color:#00acc1;
+  margin: 30px;
+}
+.headline::before,
+.headline::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	display: inline-block;
+	width: 15%;
+	height: 3px;
+	border-top: 3px solid #00acc1;
+}
+.headline::before {
+	left:0;
+}
+.headline::after {
+  right: 0;
+}
+
+/*profile.htmlの装飾
+-------------------------------------------*/
+.profile-page{
+  text-align: center;
+  font-family: "Nico Moji";
+}
+
+.profile-title{
+  margin-top: 50px;
+  font-size: 5rem;
+}
+
+.blog-write{
+  font-size: 1.5rem;
+}
+
+.masaki-img{
+  width: 300px;
+  height: 300px;
+}
+
+.profile-sentense{
+  font-size: 1.5rem;
+}
+.skill-introduction{
+  font-size: 3rem;
+}
+
+
+
+/*スキルバーの装飾
+-------------------------------------------*/
+.skillbar {
+  text-align:left;
+  position:relative;
+  display:inline-block;
+  margin:15px 0;
+  width:100%;
+  background:#eee;
+  height: 40px;
+  border-radius:3px;
+  width:100%;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.12) inset;
+}
+
+.skillbar-title {
+  position:absolute;
+  top:0;
+  left:0;
+  font-weight:bold;
+  font-size:13px;
+  color:#ffffff;
+  background:#6adcfa;
+  border-top-left-radius:3px;
+  border-bottom-left-radius:3px;
+  background:rgba(0, 0, 0, 0.1);
+  padding:0 20px;
+  height:40px;
+  line-height:40px;
+}
+
+.skillbar-bar {
+  height:40px;
+  width:0px;
+  background:#6adcfa;
+  border-radius:3px;
+  display:inline-block;
+}
+
+.skill-bar-percent {
+  position:absolute;
+  right:10px;
+  top:0;
+  font-size:11px;
+  height:35px;
+  line-height:35px;
+  color:#ffffff;
+  color:rgba(0, 0, 0, 0.4);
+}
+
+.skillbar-html .skillbar-title {
+  background: #d35400;
+}
+.skillbar-html .skillbar-bar {
+  background: #e67e22;
+}
+.skillbar-css .skillbar-title {
+  background: #0C73B8;
+}
+.skillbar-css .skillbar-bar {
+  background: #268DD2;
+}
+.skillbar-js .skillbar-title {
+  background: #E5A228;
+}
+.skillbar-js .skillbar-bar {
+  background: #FEBB42;
+}
+.skillbar-wp .skillbar-title {
+  background: #E5A228;
+}
+.skillbar-wp .skillbar-bar {
+  background: #FEBB42;
+}
+.skillbar-java .skillbar-title {
+  background: #E5A228;
+}
+.skillbar-java .skillbar-bar {
+  background: #FEBB42;
+}
+
+/*contactformスタイル
+--------------------------------------------*/
+.page-title{
+  text-align: center;
+  font-family: "Nico Moji";
+  font-size: 10rem;
+}
+
+.contact-title{
+  font-size: 3rem;
+  color: #F7D76B;
+}
+
+/*お問い合わせフォーム　スタイル
+---------------------------------------------*/
+.Form {
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+  font-family: "M PLUS Rounded 1c";
+}
+@media screen and (max-width: 480px) {
+  .Form {
+    margin-top: 40px;
+  }
+}
+.Form-Item {
+  border-top: 1px solid #F7D76B;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item {
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    flex-wrap: wrap;
+  }
+}
+.Form-Item:nth-child(5) {
+  border-bottom: 1px solid #F7D76B;
+}
+.Form-Item-Label {
+  width: 100%;
+  max-width: 248px;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  font-size: 18px;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item-Label {
+    max-width: inherit;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+  }
+}
+.Form-Item-Label.isMsg {
+  margin-top: 8px;
+  margin-bottom: auto;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item-Label.isMsg {
+    margin-top: 0;
+  }
+}
+.Form-Item-Label-Required {
+  border-radius: 6px;
+  margin-right: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 48px;
+  display: inline-block;
+  text-align: center;
+  background: #F7D76B;
+  color: #fff;
+  font-size: 14px;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item-Label-Required {
+    border-radius: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    width: 32px;
+    font-size: 10px;
+  }
+}
+.Form-Item-Input {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-left: 40px;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: 48px;
+  flex: 1;
+  width: 100%;
+  max-width: 410px;
+  background: #ffeaea;
+  font-size: 18px;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item-Input {
+    margin-left: 0;
+    margin-top: 18px;
+    height: 40px;
+    flex: inherit;
+    font-size: 15px;
+  }
+}
+.Form-Item-Textarea {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-left: 40px;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: 216px;
+  flex: 1;
+  width: 100%;
+  max-width: 410px;
+  background: #ffeaea;
+  font-size: 18px;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item-Textarea {
+    margin-top: 18px;
+    margin-left: 0;
+    height: 200px;
+    flex: inherit;
+    font-size: 15px;
+  }
+}
+.Form-Btn {
+  border-radius: 6px;
+  margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 280px;
+  display: block;
+  letter-spacing: 0.05em;
+  background: #F7D76B;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+@media screen and (max-width: 480px) {
+  .Form-Btn {
+    margin-top: 24px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 160px;
+    font-size: 16px;
+  }
+}
+
+/*blog.html
+------------------------------------*/
+.blog-page{
+  text-align: center;
+  font-family: "Nico Moji";
+}
+.blogpage-title{
+  font-size: 10rem;
+}
+.me {
+  width: 400px;
+  margin: 90px auto;
+}
+.me p{
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+}
+.me p {
+  font-weight: 200;
+}
+.me span {
+  font-weight: bold;
+}
+.social {
+  position: fixed;
+  top: 20px;
+  margin-top: 40px;
+}
+.social ul {
+  padding: 0px;
+  -webkit-transform: translate(-27px, 0);
+  -moz-transform: translate(-270px, 0);
+  -ms-transform: translate(-270px, 0);
+  -o-transform: translate(-270px, 0);
+  transform: translate(-270px, 0);
+}
+.social ul li {
+  display: block;
+  margin: 10px;
+  background: #ffeaea;
+  width: 320px;
+  text-align: right;
+  padding: 10px;
+  -webkit-border-radius: 0 60px 60px 0;
+  -moz-border-radius: 0 60px 60px 0;
+  border-radius: 0 60px 60px 0;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+.social ul li:hover {
+  -webkit-transform: translate(110px, 0);
+  -moz-transform: translate(110px, 0);
+  -ms-transform: translate(110px, 0);
+  -o-transform: translate(110px, 0);
+  transform: translate(110px, 0);
+  background: #F7D76B;
+}
+.social ul li:hover a {
+  color: #000;
+}
+.social ul li:hover i {
+  color: #fff;
+  background: red;
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+.social ul li i {
+  margin-left: 10px;
+  color: #000;
+  background: #fff;
+  padding: 10px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  background: #ffffff;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+@media (max-width:715px) {
+  .social{
+    display:none;
+  }
+
+}
+display:none
